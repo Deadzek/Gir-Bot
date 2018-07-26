@@ -269,4 +269,4 @@ bot.on("message", function(message) {
 //message.reply @s the user
 //message.channel.sendMessage is a normal response
 
-bot.login('"' +`${BOT_TOKEN}' + '"');
+bot.login(process.env.BOT_TOKEN);
