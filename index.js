@@ -269,4 +269,4 @@ bot.on("message", function(message) {
 //message.reply @s the user
 //message.channel.sendMessage is a normal response
 
-bot.login('NDcxNDc1MDcxMDMxMTgxMzMz.DjlsDQ.Ws_6wLoBAec0-Pp_Dpv_B0GSgIY');
+bot.login(process.env.BOT_TOKEN);
