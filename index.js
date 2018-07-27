@@ -221,37 +221,6 @@ bot.on("message", function(message) {
       message.channel.sendMessage( "okay i don't know how to say who got banned but i think we all know who got banned");
       return;
             
-       case "fortnite" :
-       let username = args[1];
-       let platform = args[2] || 'pc';
-       if(!username) return message.reply("Put a username dumbass.")
-
-       let data = fortnite.user(username, platform).then(data => {
-       let stats = data.stats;
-       let lifetime = stats.lifetime;
-
-       let score = lifetime[6]['Score'];
-       let mplayed = lifetime[7]['Matches Played'];
-       let wins = lifetime[8]['Wins'];
-       let winper = lifetime[9]['Win%'];
-       let kills = lifetime[10]['Kills'];
-       let kd = lifetime[11]['K/d'];
-
-       let embed = new Discord.RichEmbed()
-      .setTitle("Fortnite Tracker Lifetime Stats")
-      .setDescription("--------------------")
-      .setAuthor(data.username)
-      .setDescription("--------------------")
-      .setColor("#6eb522")
-      .addField("Wins", wins, true)
-      .addField("Kills", kills, true)
-      .addField("Score", score, true)
-      .addField("Matches Played", mplayed, true)
-      .addField("Win Percentage", mplayed, true)
-      .addField("Kill/Death Ratio", kd, true)
-      .setThumbnail('https://res.cloudinary.com/teepublic/image/private/s--s9xwYfdl--/t_Preview/b_rgb:5e366e,c_limit,f_jpg,h_630,q_90,w_630/v1525585848/production/designs/2658865_2.jpg')
-      message.channel.sendEmbed(embed);
-     });
 
 
  //fba1ede0-da53-47a4-a17c-0c808e6003ed
